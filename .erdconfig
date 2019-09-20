@@ -1,0 +1,20 @@
+attributes:
+  - inheritance
+disconnected: true
+filename: db/erd
+filetype: pdf
+indirect: false
+inheritance: true
+markup: false
+notation: bachman
+orientation: vertical
+polymorphism: true
+sort: true
+warn: true
+title: 'レジュメ標準化計画'
+exclude: 'ApplicationRecord, ActiveRecord::SchemaMigration'
+only: null
+only_recursion_depth: null
+prepend_primary: false
+cluster: false
+splines: spline

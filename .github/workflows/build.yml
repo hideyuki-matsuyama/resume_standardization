@@ -1,0 +1,58 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  setup_and_test_execution:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:11
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Ruby version
+      uses: actions/setup-ruby@master
+      with:
+        version: 2.6.3
+    - name: Install dependent libralies
+      # run: sudo apt-get install libmysqlclient-dev
+      run: sudo apt-get install libpq-dev
+    - name: Setup bundler
+      run: gem install bundler
+    - name: bundle install
+      run: bundle install --jobs 4 --retry 3
+    - name: Setup Database
+      run: |
+        cp config/database.yml.ci config/database.yml
+        bundle exec rake db:create
+        bundle exec rake db:schema:load
+      env:
+        RAILS_ENV: test
+        DB_USER: postgres
+        DB_PASSWORD: postgres
+
+    - name: Run RuboCop
+      run: bin/rails check:rubocop
+
+    - name: Run Rails Best Practices
+      run: bin/rails check:rails_best_practices
+
+    - name: Run RSpec
+      run: bin/rails check:rspec
+      env:
+        RAILS_ENV: test
+        DB_USER: postgres
+        DB_PASSWORD: postgres

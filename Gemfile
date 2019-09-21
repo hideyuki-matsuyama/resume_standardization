@@ -71,7 +71,7 @@ end
 
 gem 'rails_best_practices'
 
-
+gem 'devise'
 gem 'rails_admin'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

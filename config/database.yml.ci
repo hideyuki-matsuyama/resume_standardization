@@ -1,7 +1,7 @@
 test:
   adapter: postgresql
   encoding: unicode
-  database: my_template_repository_test
+  database: resume_standardization_development_test
   pool: 20
   username: <%= ENV["DB_USER"] %>
   password: <%= ENV["DB_PASSWORD"] %>

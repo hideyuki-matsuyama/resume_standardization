@@ -24,6 +24,9 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/factories/**/*'
     - 'spec/**/*'
+Metrics/LineLength:
+  Exclude:
+    - 'config/initializers/devise.rb'
 
 Style/AsciiComments:
   Enabled: false

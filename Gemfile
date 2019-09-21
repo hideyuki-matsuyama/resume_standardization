@@ -71,6 +71,7 @@ end
 
 gem 'rails_best_practices'
 
+gem 'cancancan'
 gem 'devise'
 gem 'rails_admin'
 

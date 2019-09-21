@@ -12,7 +12,7 @@ polymorphism: true
 sort: true
 warn: true
 title: 'レジュメ標準化計画'
-exclude: 'ApplicationRecord, ActiveRecord::SchemaMigration'
+exclude: 'ApplicationRecord, ActiveRecord::SchemaMigration, ActiveRecord::InternalMetadata'
 only: null
 only_recursion_depth: null
 prepend_primary: false

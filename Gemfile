@@ -38,6 +38,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 
   gem 'factory_bot'
+  gem 'rails_best_practices'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-performance'
@@ -69,13 +70,12 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'rails_best_practices'
-
+# Use RailsAdmin as the management.
 gem 'cancancan'
 gem 'devise'
+# gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 gem 'rails_admin', '~> 2.0'
 gem 'rails_admin_rollincode', '~> 1.0'
-# gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

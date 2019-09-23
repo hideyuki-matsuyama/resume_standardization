@@ -33,19 +33,20 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Use RailsAdmin as the management.
+gem 'cancancan'
+gem 'devise'
+# gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
+gem 'rails_admin', '~> 2.0'
+gem 'rails_admin_rollincode', '~> 1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 
-  gem 'factory_bot'
-  gem 'rails_best_practices'
-  gem 'rspec-rails'
-  gem 'rubocop'
-  gem 'rubocop-performance'
-  gem 'rubocop-rails'
-  gem 'rubocop-rspec'
-
   gem 'debase'
+  gem 'factory_bot'
+  gem 'rspec-rails'
   gem 'ruby-debug-ide'
 end
 
@@ -62,6 +63,12 @@ group :development do
   gem 'pre-commit'
   gem 'rails-erd'
   gem 'ruby-graphviz'
+
+  gem 'rails_best_practices'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
 end
 
 group :test do
@@ -69,13 +76,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'webdrivers'
 end
-
-# Use RailsAdmin as the management.
-gem 'cancancan'
-gem 'devise'
-# gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
-gem 'rails_admin', '~> 2.0'
-gem 'rails_admin_rollincode', '~> 1.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

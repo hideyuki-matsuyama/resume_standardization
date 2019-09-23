@@ -8,7 +8,6 @@ module RailsAdminSettings
         weight 1
 
         edit do
-          field :user
           field :name
           field :from
           field :to
@@ -16,6 +15,15 @@ module RailsAdminSettings
           field :conducts
           field :employments
           field :technologies
+          field :user do
+            visible false
+          end
+          field :user_id, :hidden do
+            visible true
+            default_value do
+              bindings[:view]._current_user.id
+            end
+          end
         end
       end
     end

@@ -5,7 +5,7 @@ module RailsAdminSettings
 
     included do
       rails_admin do
-        navigation_label 'タグ'
+        navigation_label 'tag'
         weight 0
 
         list do

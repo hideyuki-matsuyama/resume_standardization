@@ -54,6 +54,7 @@ GEM
     arel (9.0.0)
     ast (2.4.0)
     bcrypt (3.1.13)
+    bcrypt (3.1.13-java)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -378,8 +379,8 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails-erd
-  rails_admin
-  rails_admin_rollincode
+  rails_admin (~> 2.0)
+  rails_admin_rollincode (~> 1.0)
   rails_best_practices
   rspec-rails
   rubocop

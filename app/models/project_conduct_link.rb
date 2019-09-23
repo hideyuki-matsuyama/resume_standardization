@@ -16,6 +16,8 @@
 
 # 職歴と役割の関連
 class ProjectConductLink < ApplicationRecord
+  include RailsAdminSettings::ProjectConductLink
+
   belongs_to :project
   belongs_to :conduct
 end

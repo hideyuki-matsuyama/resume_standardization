@@ -10,6 +10,8 @@
 
 # 雇用形態
 class Employment < ApplicationRecord
+  include RailsAdminSettings::Employment
+
   has_many :project_employment_links, dependent: :destroy
   has_many :projects, through: :project_employment_links
 end

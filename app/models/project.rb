@@ -18,6 +18,8 @@
 
 # 職歴
 class Project < ApplicationRecord
+  include RailsAdminSettings::Project
+
   belongs_to :user
   has_many :project_conduct_links, dependent: :destroy
   has_many :project_employment_links, dependent: :destroy

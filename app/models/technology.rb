@@ -10,6 +10,8 @@
 
 # 技術
 class Technology < ApplicationRecord
+  include RailsAdminSettings::Technology
+
   has_many :project_technology_links, dependent: :destroy
   has_many :projects, through: :project_technology_links
 end

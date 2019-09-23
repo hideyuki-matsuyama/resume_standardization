@@ -16,6 +16,8 @@
 
 # 職歴と雇用形態の関連
 class ProjectEmploymentLink < ApplicationRecord
+  include RailsAdminSettings::ProjectEmploymentLink
+
   belongs_to :project
   belongs_to :employment
 end

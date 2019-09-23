@@ -1,18 +1,15 @@
 module RailsAdminSettings
   # RailsAdmin設定
-  module User
+  module Technology
     extend ActiveSupport::Concern
 
     included do
       rails_admin do
-        navigation_icon 'icon-user'
+        navigation_label 'タグ'
         weight 2
 
-        list do
-          field :id
-          field :email
-          field :admin
-          field :created_at
+        edit do
+          field :name
         end
       end
     end

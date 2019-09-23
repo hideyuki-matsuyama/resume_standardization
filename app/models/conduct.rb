@@ -10,6 +10,8 @@
 
 # 役割
 class Conduct < ApplicationRecord
+  include RailsAdminSettings::Conduct
+
   has_many :project_conduct_links, dependent: :destroy
   has_many :projects, through: :project_conduct_links
 end

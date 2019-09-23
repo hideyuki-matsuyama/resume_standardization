@@ -16,6 +16,8 @@
 
 # 職歴と技術の関連
 class ProjectTechnologyLink < ApplicationRecord
+  include RailsAdminSettings::ProjectTechnologyLink
+
   belongs_to :project
   belongs_to :technology
 end

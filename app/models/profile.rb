@@ -17,5 +17,7 @@
 
 # プロフィール
 class Profile < ApplicationRecord
+  include RailsAdminSettings::Profile
+
   belongs_to :user
 end

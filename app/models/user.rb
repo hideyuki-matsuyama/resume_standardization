@@ -12,9 +12,12 @@
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  failed_attempts        :integer          default(0), not null
+#  firstname              :string
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :inet
+#  lastname               :string
 #  locked_at              :datetime
+#  nickname               :string
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
@@ -46,6 +49,4 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :profile
 
   validates :email, presence: true
-  validates :password, :password_confirmation, presence: true
-  validates :password, confirmation: true
 end

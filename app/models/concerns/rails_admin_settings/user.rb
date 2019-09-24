@@ -22,8 +22,9 @@ module RailsAdminSettings
             read_only true
             help ''
           end
-          field :password
-          field :password_confirmation
+          field :firstname
+          field :lastname
+          field :nickname
           field :admin
         end
       end

@@ -22,6 +22,7 @@ Metrics/MethodLength:
   Max: 25
 Metrics/BlockLength:
   Exclude:
+    - 'app/models/concerns/rails_admin_settings/**/*'
     - 'spec/factories/**/*'
     - 'spec/**/*'
 Metrics/LineLength:
@@ -33,6 +34,10 @@ Style/AsciiComments:
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/IfUnlessModifier:
+  Enabled: false
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+Style/TrailingCommaInArrayLiteral:
   Enabled: false
 Style/RescueStandardError:
   Exclude:

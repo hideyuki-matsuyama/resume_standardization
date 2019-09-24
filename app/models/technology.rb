@@ -14,4 +14,6 @@ class Technology < ApplicationRecord
 
   has_many :project_technology_links, dependent: :destroy
   has_many :projects, through: :project_technology_links
+
+  validates :name, presence: true
 end

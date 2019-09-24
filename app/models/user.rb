@@ -43,4 +43,9 @@ class User < ApplicationRecord
 
   has_one :profile, dependent: :destroy
   has_many :projects, dependent: :destroy
+  accepts_nested_attributes_for :profile
+
+  validates :email, presence: true
+  validates :password, :password_confirmation, presence: true
+  validates :password, confirmation: true
 end

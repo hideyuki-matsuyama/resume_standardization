@@ -14,4 +14,6 @@ class Employment < ApplicationRecord
 
   has_many :project_employment_links, dependent: :destroy
   has_many :projects, through: :project_employment_links
+
+  validates :name, presence: true
 end

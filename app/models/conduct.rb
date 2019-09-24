@@ -14,4 +14,6 @@ class Conduct < ApplicationRecord
 
   has_many :project_conduct_links, dependent: :destroy
   has_many :projects, through: :project_conduct_links
+
+  validates :name, presence: true
 end

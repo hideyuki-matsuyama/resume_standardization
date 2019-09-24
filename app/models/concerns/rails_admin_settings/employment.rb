@@ -9,11 +9,14 @@ module RailsAdminSettings
         weight 0
 
         list do
-          field :id
-          field :name
-          field :updated_at do
-            date_format :long
+          field :id do
+            sort_reverse false
+            visible false
           end
+          field :name
+        end
+        show do
+          field :name
         end
         edit do
           field :name

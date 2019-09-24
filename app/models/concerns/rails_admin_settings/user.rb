@@ -5,14 +5,26 @@ module RailsAdminSettings
 
     included do
       rails_admin do
-        navigation_icon 'icon-user'
-        weight 2
+        visible false
 
         list do
-          field :id
           field :email
           field :admin
-          field :created_at
+        end
+        show do
+          field :email
+          field :admin
+          field :sign_in_count
+          field :profile
+        end
+        edit do
+          field :email do
+            read_only true
+            help ''
+          end
+          field :password
+          field :password_confirmation
+          field :admin
         end
       end
     end

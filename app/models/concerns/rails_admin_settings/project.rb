@@ -9,7 +9,9 @@ module RailsAdminSettings
 
         edit do
           field :name
-          field :from
+          field :from do
+            sort_reverse true
+          end
           field :to
           field :description
           field :conducts

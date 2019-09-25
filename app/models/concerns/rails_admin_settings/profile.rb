@@ -5,7 +5,7 @@ module RailsAdminSettings
 
     included do
       rails_admin do
-        weight 0
+        visible false
 
         edit do
           field :introduction do

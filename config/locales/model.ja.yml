@@ -2,3 +2,8 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      project: 経歴
+      profile: 自己紹介
+      conduct: 役割
+      employment: 雇用形態
+      technology: 使用技術

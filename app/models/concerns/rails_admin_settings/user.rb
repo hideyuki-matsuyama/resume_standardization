@@ -26,6 +26,7 @@ module RailsAdminSettings
           field :lastname
           field :nickname
           field :admin
+          field :profile
         end
       end
     end
